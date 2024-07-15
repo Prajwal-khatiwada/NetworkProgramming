@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class Client {
 
     public static void main(String[] args) {
-        try (Socket socket = new Socket("localhost",9000);
+        try (Socket socket = new Socket("localhost",8009);
              PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
              BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in))) {
