@@ -31,6 +31,9 @@ public class UDPClient {
 
             String modifiedSentence = new String(receivePacket.getData(), 0, receivePacket.getLength());
             System.out.println("FROM SERVER " + modifiedSentence);
+
+            InetAddress IPAddress2 = sendPacket.getAddress();
+            System.out.println("IP Address: "+IPAddress2 +" Port: "+sendPacket.getPort());
         } catch (SocketException e) {
             System.err.println("SOCKET EXCEPTION: "+e.getMessage());
         }catch (UnknownHostException e){

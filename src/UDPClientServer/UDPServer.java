@@ -20,6 +20,7 @@ public class UDPServer {
             System.out.println("Client Says: "+sentence);
 
             InetAddress IPAddress = receivePacket.getAddress();
+            System.out.println("IP Address: "+IPAddress +"Port: "+receivePacket.getPort());
             int port = receivePacket.getPort();
             sendData = sentence.getBytes();
             DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAddress, port);
